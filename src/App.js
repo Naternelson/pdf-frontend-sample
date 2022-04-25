@@ -29,6 +29,7 @@ function App() {
           setHeader(tblHead)
           setLoading(false)
       } catch(error){
+          setLoading(false)
           console.error({error})
       }
   }
@@ -76,10 +77,11 @@ const configRequest = () => {
   data.append("table", true)
   const config = {
     headers: {'content-type': 'multipart/form-data'},
+    withCredentials: true 
   }
   
-  const url = "http://localhost:3000/pdf"
-  // const url = "https://pdf-parser-microservice.herokuapp.com/pdf"
+  // const url = "http://localhost:3000/pdf"
+  const url = "https://pdf-parser-backend.herokuapp.com/pdf"
   return {data, config, url}
 
 }
