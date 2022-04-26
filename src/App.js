@@ -76,7 +76,8 @@ const configRequest = () => {
   const data = new FormData()
   data.append("table", true)
   const config = {
-    headers: {'content-type': 'multipart/form-data'}
+    headers: {'content-type': 'multipart/form-data'},
+    withCredentials: true
   }
   
   // const url = "http://localhost:3000/pdf"
