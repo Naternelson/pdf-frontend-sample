@@ -82,6 +82,7 @@ const configRequest = () => {
   
   // const url = "http://localhost:3000/pdf"
   const url = "https://pdf-parser-backend.herokuapp.com/pdf"
+  console.log({data, config, url})
   return {data, config, url}
 
 }
